@@ -1,6 +1,6 @@
 import * as alt from 'alt-client';
-import * as shared from 'alt-shared';
 import * as native from 'natives';
+import { Appearance } from 'alt-crc';
 
 let ped: number;
 let lastModel: number;
@@ -24,7 +24,7 @@ export function destroy(callDestroyEvent = true) {
     alt.emit('crc-preview-character-destroyed');
 }
 
-export async function update(appearance: shared.Appearance, pos: alt.Vector3) {
+export async function update(appearance: Appearance, pos: alt.Vector3) {
     if (!appearance) {
         return;
     }
