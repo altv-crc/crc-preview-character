@@ -6,6 +6,8 @@ let ped: number;
 let lastModel: number;
 
 export function destroy(callDestroyEvent = true) {
+    lastModel = undefined;
+
     if (typeof ped === 'undefined') {
         return;
     }
