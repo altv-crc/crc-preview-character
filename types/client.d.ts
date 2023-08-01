@@ -1,4 +1,5 @@
-import * as shared from 'alt-shared';
+import * as crc from 'alt-crc';
+import * as alt from 'alt-shared';
 
 declare module 'alt-client' {
     interface ICustomEmitEvent {
@@ -7,7 +8,7 @@ declare module 'alt-client' {
          *
          * @memberof ICustomEmitEvent
          */
-        'crc-preview-character-update': (appearance: shared.Appearance, pos: shared.Vector3) => void;
+        'crc-preview-character-update': (appearance: crc.Appearance, pos: alt.Vector3) => void;
 
         /**
          * Listen to this function when you want to know `when` a ped has finished updating with appearance data
